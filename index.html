@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Taiwan</title>
+    <link rel="icon" type="image/x-icon" href="assets/taiwan.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="javascript/scripts.js"></script>
+
+</head>
+<body id="page-top">
+    <nav id="navbar">
+        <div class="container">
+            <div><a id="logo" href="#page-top">ITWProject</a></div>
+            <div>
+                <ul>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#sightseeing">Sightseeing</a></li>
+                    <li><a href="#festivals">Festivals</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content">
+            <h1>Discover Taiwan</h1>
+            <h2>The Wonder of a Beautiful Island</h2>
+            <p>Taiwan is a vibrant island with a rich culture, stunning natural beauty and unrivaled cuisine. From bustling night markets to peaceful mountain trails, every step is an adventure. Experience the warmth, diversity and creative spirit of this fascinating island.</p>
+            <a class="exp-btn" href="#news">Explore</a>
+        </div>
+    </header>
+
+    <!-- News Section -->
+    <section id="news">
+        <h1>NEWS</h1>
+        <div id="news-container">
+            <div class="news-header">
+                <div class="title-area">Title</div>
+                <div class="date-area">Date</div>
+            </div>
+            <div class="news-list">
+                <div class="news-item">
+                    <p class="news-title">With an eye toward attracting more senior travelers, the Tourism Administration, Ministry of Transportation and Communications (MOTC), is set to launch a "Golden Years Tours" certification system</p>
+                    <p class="news-date">Dec 08, 2023</p>
+                </div>
+                <div class="news-item">
+                    <p class="news-title">Overseas Visitors Ride High-Speed Rail in Taiwan: Buy One, Get One Free! First-month offer includes Taoyuan Airport MRT Round Trip Ticket + Taipei Metro 72-Hour Pass</p>
+                    <p class="news-date">Dec 01, 2023</p>
+                </div>
+                <div class="news-item">
+                    <p class="news-title">[Taiwan Tourism Events] Welcoming the New Year</p>
+                    <p class="news-date">Nov 01, 2023</p>
+                </div>
+                <div class="news-item">
+                    <p class="news-title">The “Taiwan Tourist Shuttle" has opened 18 new routes and increased service frequency by more than 1,400 service trips every month to improve public transportation services at tourist attractions</p>
+                    <p class="news-date">Sep 14, 2023</p>
+                </div>
+                <div class="news-item hidden">
+                    <p class="news-title">Alabao Bay, one of the world’s secret destinations, is now in the international spotlight after winning the PATA Gold Award for its success in sustainable tourism development</p>
+                    <p class="news-date">Aug 28, 2023</p>
+                </div>
+                <div class="news-item hidden">
+                    <p class="news-title">Taiwan Tour Bus “2 people travel, 1 for free” promotion begins in July</p>
+                    <p class="news-date">Jul 14, 2023</p>
+                </div>
+            </div>
+            <button id="more-news-btn">More News</button>
+        </div>        
+    </div>
+        
+
+    <!-- Sightseeing Section -->
+    <section id="sightseeing">
+        <h1>SIGHTSEEING</h1>
+        <div class="sightseeing-container">
+            <!-- Each sightseeing item has a corresponding modal -->
+            <div class="sightseeing-item northern-taiwan" onclick="openModal('northernTaiwanModal')">
+                <p>Northern Taiwan</p>
+            </div>
+            <div class="sightseeing-item central-taiwan" onclick="openModal('centralTaiwanModal')">
+                <p>Central Taiwan</p>
+            </div>
+            <div class="sightseeing-item southern-taiwan" onclick="openModal('southernTaiwanModal')">
+                <p>Southern Taiwan</p>
+            </div>
+            <div class="sightseeing-item eastern-taiwan" onclick="openModal('easternTaiwanModal')">
+                <p>Eastern Taiwan</p>
+            </div>
+            <div class="sightseeing-item offshore-islands" onclick="openModal('offshoreIslandsModal')">
+                <p>Offshore Islands</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Northern Taiwan Modal -->
+    <div id="northernTaiwanModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1>Northern Taiwan</h1>
+            <div class="modal-body">
+                <div class="slider">
+                    <div class="slides">
+                        <!-- Slides go here -->
+                        <img src="assets/img/signtseeing/northern/1.png" alt="Northern Taiwan 1">
+                        <img src="assets/img/signtseeing/northern/2.png" alt="Northern Taiwan 2">
+                        <img src="assets/img/signtseeing/northern/3.png" alt="Northern Taiwan 3">
+                        <img src="assets/img/signtseeing/northern/4.png" alt="Northern Taiwan 4">
+                    </div>
+                    <button class="slide-btn left" onclick="moveSlide('northernTaiwanModal', -1)">&#10094;</button>
+                    <button class="slide-btn right" onclick="moveSlide('northernTaiwanModal', 1)">&#10095;</button>
+                </div>
+                <p>"Northern Taiwan" refers to the following seven counties and cities: Taipei City, New Taipei City, Keelung City, Yilan County, Taoyuan City, Hsinchu County and Hsinchu City. You may enjoy a bird's-eye-view of the capital from Taipei 101, the Taiwan's tallest building, go to National Palace Museum for appreciating historic objects, or take a walk on old streets in Jiufen, Tamsui, Yingge and Sanxia to immerse in old-time charm.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Central Taiwan Modal -->
+    <div id="centralTaiwanModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1>Central Taiwan</h1>
+            <div class="modal-body">
+                <div class="slider">
+                    <div class="slides">
+                        <!-- Slides go here -->
+                        <img src="assets/img/signtseeing/central/1.png" alt="Central Taiwan 1">
+                        <img src="assets/img/signtseeing/central/2.png" alt="Central Taiwan 2">
+                        <img src="assets/img/signtseeing/central/3.png" alt="Central Taiwan 3">
+                        <img src="assets/img/signtseeing/central/4.png" alt="Central Taiwan 4">
+                    </div>
+                    <button class="slide-btn left" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="slide-btn right" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+                <p>"Central Taiwan" refers to the following five counties and cities: Miaoli County, Taichung City, Changhua County, Nantou County, and Yunlin County. Located at the heart of Taiwan, these places are ideal for travel as the climate is mild. Many holiday villages and theme parks suitable for young and old can also be found here. If you like culture and art, you must not miss the wood carving studios and pottery kilns in Miaoli, where DIY classes are available. National Taiwan Museum of Fine Arts and National Museum of Natural Science are worth some close explorations. Yunlin is known to the world as the place of origin of puppet theatre. It is also worth some fine appreciation.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Southern Taiwan Modal -->
+    <div id="southernTaiwanModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1>Southern Taiwan</h1>
+            <div class="modal-body">
+                <div class="slider">
+                    <div class="slides">
+                        <!-- Slides go here -->
+                        <img src="assets/img/signtseeing/southern/1.png" alt="Southern Taiwan 1">
+                        <img src="assets/img/signtseeing/southern/2.png" alt="Southern Taiwan 2">
+                        <img src="assets/img/signtseeing/southern/3.png" alt="Southern Taiwan 3">
+                        <img src="assets/img/signtseeing/southern/4.png" alt="Southern Taiwan 4">
+                    </div>
+                    <button class="slide-btn left" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="slide-btn right" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+                <p>Southern Taiwan is full of history and culture. Tainan City is the island's oldest city. Until the late 19th century, it had also been a political, economic and cultural hub. Thus, the city features plenty of historic sites. The Tropic of Cancer passes through Chiayi County, and thus Tropic of Cancer Solar Exploration Center has been built to highlight the city's unique geographical trait. World-famous Alishan Forest Recreation Park boasts high-elevation forest railways and off-the-beaten-track old hiking trails, making it a must-see for visitors in Taiwan.                </p>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Eastern Taiwan Modal -->
+    <div id="easternTaiwanModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1>Eastern Taiwan</h1>
+            <div class="modal-body">
+                <div class="slider">
+                    <div class="slides">
+                        <!-- Slides go here -->
+                        <img src="assets/img/signtseeing/eastern/1.png" alt="Eastern Taiwan 1">
+                        <img src="assets/img/signtseeing/eastern/2.png" alt="Eastern Taiwan 2">
+                        <img src="assets/img/signtseeing/eastern/3.png" alt="Eastern Taiwan 3">
+                        <img src="assets/img/signtseeing/eastern/4.png" alt="Eastern Taiwan 4">
+                    </div>
+                    <button class="slide-btn left" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="slide-btn right" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+                <p>Eastern Taiwan includes two counties, Hualien and Taitung. It faces the vast Pacific Ocean on the East and leans against the Central Mountain Ridge on the West. Standing in between such magnificent waters and mountains, when the Portuguese sailed by during their early explorations, they exclaimed "formosa," meaning "how beautiful" in their language. That's how Taiwan acquired its other name "Formosa," and this reveals how beautiful eastern Taiwan is. Eastern Taiwan is blessed with lots of natural resources, an old farming culture, and kind-hearted locals. Known as the "back yard" of Taiwan, it is ideal for a slow trip. Take a walk on this paradise on Earth, take some deep breaths, and breathe in sweet air. Long stay is recommended here.                </p>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Offshore Islands Modal -->
+    <div id="offshoreIslandsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h1>Offshore Islands</h1>
+            <div class="modal-body">
+                <div class="slider">
+                    <div class="slides">
+                        <!-- Slides go here -->
+                        <img src="assets/img/signtseeing/offshore/1.png" alt="Offshore Islands 1">
+                        <img src="assets/img/signtseeing/offshore/2.png" alt="Offshore Islands 2">
+                        <img src="assets/img/signtseeing/offshore/3.png" alt="Offshore Islands 3">
+                        <img src="assets/img/signtseeing/offshore/4.png" alt="Offshore Islands 4">
+                    </div>
+                    <button class="slide-btn left" onclick="moveSlide(offshoreIslandsModal,-1)">&#10094;</button>
+                    <button class="slide-btn right" onclick="moveSlide(offshoreIslandsModal,1)">&#10095;</button>
+                </div>
+                <p>Other than the main island, Taiwan has plenty of small surrounding islets, administered by counties such as Penghu, Kinmen and Lienchiang. Once a forbidden military zone, Kinmen today is a popular tourist area. Its three specialties – steel knives, peanut candies, and sorghum wine, are long-time best sellers. Matsu's old wine and the sorghum wine of Tunnel 88 have a resounding taste.                </p>
+            </div>
+        </div>    
+    </div>
+
+    <!-- Festivals Section -->
+    <section id="festivals">
+        <h1>FESTIVALS</h1>
+        <div class="vertical-stepper">
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(1)">
+                    <div class="step-number">02</div>
+                    <div class="step-title">Chinese New Year</div>
+                </div>
+                <div id="step1-content" class="step-content">
+                    <img src="assets/img/festivals/ChineseNewYear.png" alt="Chinese New Year" />
+                    <p>The Chinese New Year, also known as the Spring Festival, is celebrated from the first to the fifth day of the first month of the Chinese lunar calendar. Literally, Chinese people refer to this festival as "passing the year," which means shooing out the old and welcoming the new; it is considered the most important Chinese holiday of the year. There are a number of related customs and traditions that go along with the festival. Normally, on the 23rd or 24th day of the last month of the Chinese lunar calendar, people sacrifice to the Hearth God and send him off on his annual journey to Heaven; this signals the start of the Chinese New Year holidays.                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(2)">
+                    <div class="step-number">02</div>
+                    <div class="step-title">The Lantern Festival</div>
+                </div>
+                <div id="step2-content" class="step-content">
+                    <img src="assets/img/festivals/SplendidMain Lanterns.png" alt="The Lantern Festival" />
+                    <p>The Lantern festival is also known as the "little New Year." Aside from the usual worship of the gods, the occasion involves guessing lantern riddles, eating rice-flour dumplings, and releasing lanterns into the sky in New Taipei City's Pingxi Township. The Yanshui Beehive Rocket Festival in Tainan County is another major event during the Lantern Festival. Colorful lanterns of all sizes and shapes have always been main attractions of the Lantern Festival, which is celebrated with a grand national festival and other major festivals in Taipei and Kaohsiung.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(3)">
+                    <div class="step-number">04</div>
+                    <div class="step-title">Qingming Festival</div>
+                </div>
+                <div id="step3-content" class="step-content">
+                    <img src="assets/img/festivals/04.jpeg" alt="The Lantern Festival" />
+                    <p>The Qingming Festival or Ching Ming Festival,also known as Tomb-Sweeping Day in English (sometimes also called Chinese Memorial Day, Ancestors' Day, the Clear Brightness Festival, or the Pure Brightness Festival), is a traditional Chinese festival observed by ethnic Chinese in mainland China, Hong Kong, Macau, Taiwan, Malaysia, Singapore, Cambodia, Indonesia, Philippines, Thailand, and Vietnam. A celebration of spring, it falls on the first day of the fifth solar term (also called Qingming) of the traditional Chinese lunisolar calendar. This makes it the 15th day after the Spring Equinox, either 4, 5 or 6 April in a given year. During Qingming, Chinese families visit the tombs of their ancestors to clean the gravesites and make ritual offerings to their ancestors. Offerings would typically include traditional food dishes and the burning of joss sticks and joss paper. The holiday recognizes the traditional reverence of one's ancestors in Chinese culture.                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(4)">
+                    <div class="step-number">06</div>
+                    <div class="step-title">Dragon Boat Festival</div>
+                </div>
+                <div id="step4-content" class="step-content">
+                    <img src="assets/img/festivals/06.jpeg" alt="The Lantern Festival" />
+                    <p>Together with the Chinese New Year and the Mid-Autumn Moon Festival, the Dragon Boat Festival is one of Taiwan's three major annual traditional holidays. Because of its origins and customs, it is closely related to the remembrance of Qu Yuan, a poet who lived during the Warring States Period. That is why, from ancient times, people have also referred to the Dragon Boat Festival as the" Poet's Festival."                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(5)">
+                    <div class="step-number">08</div>
+                    <div class="step-title">Zhongyuan Festival</div>
+                </div>
+                <div id="step5-content" class="step-content">
+                    <img src="assets/img/festivals/08.jpeg" alt="The Lantern Festival" />
+                    <p>The seventh month of the Chinese lunar calendar is Ghost Month. Traditionally, it starts from dawn on the first day of the month, when the gates of the netherworld open, and ends on the 29th day of the month, when the gates close. During the festivities of the month, which reach a peak on the 15th day, people hold rituals to solicit salvation from disaster and misfortune.                    </p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep(6)">
+                    <div class="step-number">09</div>
+                    <div class="step-title">Mid-Autumn Festival</div>
+                </div>
+                <div id="step6-content" class="step-content">
+                    <img src="assets/img/festivals/09.jpeg" alt="The Lantern Festival" />
+                    <p>The Mid-Autumn Festival, also called the Moon Festival, is the holiday with the most romantic atmosphere. Because this holiday occurs during the autumn, when the harvest season is over, people in earlier days chose this day to make offerings and thank the gods for the bountiful harvest. The celebration has become a time for families to get together. The most familiar myth concerning this festival is that Chang-e flying to the moon after secretly drinking her husband's elixir of life. Aside from this, there are also tales of the Jade Rabbit and of "Wu Gang chopping down the cassia tree."                    </p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="services-overlay">
+            <h1>SERVICES</h1>
+            <div class="service-container">
+                <div class="service-card">
+                    <h3>Accommodation</h3>
+                    <p>From cozy bed and breakfasts to luxurious hotels, our accommodation options cater to every preference, ensuring a comfortable and restful stay.</p>
+                    <a href="https://taiwanstay.net.tw/" target="_blank">Booking Now</a>
+                </div>
+                <div class="service-card">
+                    <h3>Restaurants</h3>
+                    <p>Savor the flavors of local and international cuisines at our selected restaurants, offering delightful dining experiences for every taste.</p>
+                    <a href="https://tw.eztable.com/" target="_blank">Booking Now</a>
+                </div>
+                <div class="service-card">
+                    <h3>Transportation</h3>
+                    <p>Efficient, reliable, and convenient transportation options to take you from point A to B with ease, whether it's for work or leisure.</p>
+                    <a href="https://www.taiwantrip.com.tw/Frontend/Reservation/Ticket" target="_blank">Booking Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>CONTACT</h1>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="sbbtn">Send</button>
+            </form>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright ©2023 255921</p>
+    </footer>
+</body>
+</html>

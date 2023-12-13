@@ -1,0 +1,597 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+#navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    z-index: 1000; /* 设置较高的z-index确保导航栏在其他内容上方 */
+    transition: background-color 0.5s ease; /* 平滑背景色变化 */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* 子元素分布在两端 */
+    align-items: center; /* 垂直居中对齐 */
+    padding: 0 10%; /* 根据实际情况调整 */
+    height: 70px; /* 或者根据设计需要调整 */
+}
+
+#logo {
+    text-align: left; /* 左對齊 logo */
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#navbar ul {
+    list-style: none; /* 去掉列表项目的默认样式 */
+    display: flex; /* 设置为flex布局，使列表项目横向排列 */
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+
+#navbar ul li {
+    padding: 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#navbar ul li a:hover {
+    color: rgb(255, 208, 0);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#hero {
+    position: relative; /* 為偽元素定位做準備 */
+    background-image: url('../assets/img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 調整對齊到右側 */
+    text-align: left; /* 文字對齊到左側 */
+    color: white;
+    z-index: 1; /* 確保遮罩層在內容之下 */
+
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7); /* 黑色遮罩層，透明度設為40% */
+    z-index: -1;
+}
+
+#hero h1 {
+    font-size: 60px; /* 標題的字體大小 */
+    white-space: nowrap; /* 防止自動換行 */
+    margin: 0;
+    padding: 0;
+}
+
+#hero h2 {
+    white-space: nowrap; /* 防止自動換行 */
+    margin-top: 30px;
+}
+
+#hero p {
+    font-size: 18px; /* 段落的字體大小 */
+    width: 150%;
+    line-height: 30px;
+}
+
+.hero-content {
+    max-width: 300px; /* 或者根據需要調整 */
+    margin-right: 20%; /* 或者根據需要調整 */
+    z-index: 2; /* 確保文字內容在遮罩層之上 */
+}
+
+.exp-btn {
+    background: #ffffff;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 40px;
+    border-radius: 4px;
+    z-index: 2;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff; /* 懸浮時顯示白色邊框 */
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+
+/* Scroll-related styles */
+#navbar.scrolled {
+    background-color: #7c7c7c;
+    color: #333;
+}
+
+#navbar.scrolled #logo {
+    color: #333;
+}
+
+#navbar.scrolled ul li a {
+    color: #333;
+}
+
+#navbar.scrolled ul li a:hover {
+    color: white;
+}
+
+
+/* News */
+#news-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.news-header, .news-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.news-header {
+    background-color: #eee;
+    margin-bottom: 10px;
+}
+
+.title-area, .date-area {
+    font-weight: bold;
+}
+
+.news-item {
+    border-bottom: 1px solid #ccc;
+}
+
+.news-item:hover p {
+    font-weight: bold; /* 悬停时使文字变粗 */
+    cursor: pointer; /* 显示手指指针 */
+}
+
+.news-title, .news-date {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.news-title {
+    flex-grow: 1; /* 使新闻标题占据多余空间 */
+    margin-right: 10px; /* 与日期保持间隔 */
+}
+
+.news-date {
+    min-width: 100px; /* 为日期设置最小宽度 */
+}
+
+#more-news-btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#more-news-btn:hover {
+    background-color: #555;
+    border: 2px solid #555;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+#news h1 {
+    text-align: center;
+}
+
+
+
+/* Contact Section Styles */
+#contact {
+    background: #f5f5f5; /* 背景色 */
+    padding: 50px 0; /* 上下填充 */
+    text-align: center; /* 文本居中 */
+}
+
+.contact-form {
+    max-width: 800px; /* 最大宽度，可以根据需要调整 */
+    margin: auto; /* 水平居中 */
+}
+
+.form-group {
+    margin-bottom: 15px; /* 底部间距 */
+    text-align: left; /* 输入字段文本左对齐 */
+}
+
+.form-group label {
+    display: block; /* 使标签独占一行 */
+    margin-bottom: 5px; /* 标签和输入框之间的间距 */
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%; /* 占满容器宽度 */
+    padding: 10px; /* 内填充 */
+    border: 1px solid #ddd; /* 边框 */
+    border-radius: 4px; /* 边框圆角 */
+    margin-bottom: 10px; /* 与下一个元素间距 */
+}
+
+.form-group textarea {
+    height: 150px; /* 文本区域的高度，可以根据需要调整 */
+    resize: vertical; /* 允许垂直调整大小 */
+}
+
+/* 按钮样式 */
+.sbbtn {
+    background: #333; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 4px;
+    cursor: pointer; 
+}
+
+.sbbtn:hover {
+    background: #555; /
+}
+
+
+/* Sightseeing Section Styles */
+#sightseeing {
+    text-align: center; 
+    padding: 50px 0; 
+}
+
+.sightseeing-container {
+    display: flex;
+    flex-wrap: wrap; /* 允许项目换行 */
+    justify-content: space-around; /* 项目间的间距均匀分布 */
+    padding: 0 10%; /* 容器的左右填充 */
+}
+
+.sightseeing-item {
+    width: 250px; /* 可根据需要调整宽度 */
+    height: 250px; /* 高度与宽度相同形成正方形 */
+    margin: 10px; /* 间距 */
+    color: white;
+    background: #fff; /* 背景色 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 阴影效果 */
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    cursor: pointer; /* 鼠标手势 */
+    background-size: cover; /* 确保背景图像覆盖整个元素 */
+    background-position: center; /* 图像居中 */
+    overflow: hidden; /* 防止内容溢出 */
+    transition: transform 0.3s ease; /* 添加过渡效果使放大更平滑 */
+}
+
+.sightseeing-item:hover {
+    transform: scale(1.15); 
+}
+
+.northern-taiwan {
+    background-image: url('../assets/img/signtseeing/northern.png');
+}
+
+.central-taiwan {
+    background-image: url('../assets/img/signtseeing/central.png');
+}
+
+.southern-taiwan {
+    background-image: url('../assets/img/signtseeing/southern.png');
+}
+
+.eastern-taiwan {
+    background-image: url('../assets/img/signtseeing/eastern.png');
+}
+
+.offshore-islands {
+    background-image: url('../assets/img/signtseeing/offshore.png');
+}
+
+
+
+
+/* Modal Styles */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 2000; /* 高于一切其他内容 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6); /* 半透明背景 */
+}
+
+.modal-content {
+    background: #fff;
+    margin: 10% auto; /* 水平垂直居中 */
+    padding: 20px;
+    width: 80%; /* 可根据需要调整宽度 */
+    border-radius: 10px; /* 添加圆角 */
+}
+
+.modal-content p{
+    line-height: 30px;
+}
+
+.modal-content h1 {
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right; /* 右上角位置 */
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    margin: 15px 0;
+}
+
+.modal-body p {
+    max-width: 70%; /* Each image takes full width of the slider */
+    margin: auto;
+}
+
+.slider {
+    position: relative;
+    max-width: 600px; /* Maximum width of the slider */
+    margin: auto;
+    overflow: hidden; /* Hide the non-active slides */
+}
+
+.slides {
+    display: flex;
+    transition: 0.5s ease all; /* Smooth transition for sliding effect */
+}
+
+.slides img {
+    max-width: 70%; /* Each image takes full width of the slider */
+    margin: auto;
+    display: block;
+}
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.left {
+    left: 0;
+    border-radius: 0 3px 3px 0; /* Rounded corners on the right side */
+}
+
+.right {
+    right: 0;
+    border-radius: 3px 0 0 3px; /* Rounded corners on the left side */
+}
+
+
+
+
+/* Fistivals */
+#festivals {
+    width: auto;
+    margin: auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+#festivals h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.vertical-stepper {
+    border-left: 4px solid #ccc;
+    position: relative;
+}
+
+.step {
+    position: relative;
+    padding: 20px;
+}
+
+.step-header {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.step-number {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #ccc;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.step-title {
+    color: #666; /* Default color for titles */
+    transition: color 0.3s;
+}
+
+.step-content {
+    display: none;
+    padding-left: 35px; /* Align with step-number */
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Click item */
+.active {
+    font-weight: bold;
+    color: black;
+}
+
+.step-content img {
+    max-width: 55%;  /* Ensures image is not wider than its container */
+    display: block;    /* Display block to remove bottom space under image */
+    margin: 10px auto;    /* Center the image */
+}
+
+.step-content p {
+    max-width: 60%;
+    color: #666666;      /* Gray color for paragraph text */
+    line-height: 30px; /* Line spacing */
+    text-align: justify; /* Justify text for better alignment */
+    margin: 10px auto; /* Add some space above the paragraph */
+}
+
+  
+
+/* Services */
+#services {
+    width: 100%; /* 服务部分宽度填满整个视口宽度 */
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    text-align: center;
+}
+
+.services-overlay {
+    width: 100%;
+    background: #ffffff; /* 卡片背景色 */
+    padding: 150px 20px 160px;
+}
+
+.service-container {
+    max-width: 1200px; /* 根据需要调整 */
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* 允许卡片换行 */
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.service-card {
+    background: #ffffff; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+    padding: 20px;
+    flex-basis: calc(33.333% - 20px); /* 每个卡片占据三分之一的宽度，减去间距 */
+    margin: 10px; /* 卡片间的间距 */
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex; /* 将 service-card 设为 flex 容器 */
+    flex-direction: column; /* 元素纵向排列 */
+    justify-content: space-between; /* 为元素提供上下间距 */
+}
+
+.service-card h3 {
+    margin-top: 0;
+}
+
+.service-card p {
+    color: #666; /* Paragraph text color */
+    font-size: 14px; /* Adjust size as needed */
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.service-card a{
+    background: #333; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.service-card a:hover {
+    background: transparent; /* Button hover color */
+    text-decoration: none;
+    color: #555;
+    border: 2px solid #555; /* 懸浮時顯示白色邊框 */
+    transition: background-color 0.1s ease; /* 平滑背景色变化 */
+}
+
+/* 添加媒体查询以处理较小屏幕的布局 */
+@media (max-width: 768px) {
+    .service-card {
+        flex-basis: 100%; /* 在小屏幕上，卡片占满整个宽度 */
+    }
+}
+
+
+
+/* Footer Styles */
+footer {
+    background: #333; /* 背景色 */
+    color: white; /* 文本颜色 */
+    text-align: center; /* 文本居中 */
+    padding: 20px 0; /* 上下填充 */
+}
+
+footer p {
+    margin: 0; /* 移除默认边距 */
+}
