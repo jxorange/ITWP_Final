@@ -29,14 +29,6 @@ The project is organized as follows:
 - Clone or download the project repository.
 - Open the `index.html` file in a web browser to view the project.
 
-## Additional Notes
-- In case of any issues or if the media files are still too large, please consider using tools such as [TinyPNG](https://tinypng.com/) for further image compression.
-- For video files, consider converting them to lower resolutions or using online services like [HandBrake](https://handbrake.fr/) for compression.
-
-## Repository Link for Full Version (if applicable)
-Please insert a link to the Github repository if you have hosted the full version of the project there.
-
-For any further queries regarding the project, please reach out to the project team leader.
 
 Thank you for your interest in our Discover Taiwan project!
 
