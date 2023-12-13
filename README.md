@@ -30,5 +30,7 @@ The project is organized as follows:
 - Open the `index.html` file in a web browser to view the project.
 
 
+## Github Link
+- https://github.com/jxorange/ITWP_Final
 Thank you for your interest in our Discover Taiwan project!
 
